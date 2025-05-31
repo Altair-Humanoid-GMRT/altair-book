@@ -32,7 +32,7 @@ docs/motion/tuning.md
 docs/motion/create_xacro.md
 docs/motion/simulation.md
 docs/motion/dynamixel_controller.md
-docs/ros2-control.md
+docs/motion/ros2-control.md
 ```
 
 ```{toctree}

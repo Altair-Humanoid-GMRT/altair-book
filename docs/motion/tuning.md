@@ -1,4 +1,4 @@
-# Robot Tuning
+# Kick Tuning (Deprecated)
 
 <aside>
 💡 Make Sure to **Fasten Every Joint Bolts** Before Tuning
