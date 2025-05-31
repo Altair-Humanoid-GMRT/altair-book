@@ -4,7 +4,7 @@
 |--------|---------|------|
 | Falah Naufal Zaki | falahnzk@gmail.com | 31 May, 2025 |
 
-<img src="resources/02/ros2_control_architecture.webp" alt="ROS2 Control Architecture" title="ROS2 Control Architecture" width="500">
+<img src="../resources/motion/ros2_control_architecture.webp" alt="ROS2 Control Architecture" title="ROS2 Control Architecture" width="500">
 
 **ros2_control** is a framework system developed in ROS 2 ecosystem for elevating production speed and abstraction to any hardware system. The key concept is **abstraction**. From a single framework, you can empowering any robot project to life.
 
@@ -46,7 +46,7 @@ Transitions between states are triggered by these functions:
 - `cleanup()`: Release resources and clear data
 - `shutdown()`: Gracefully terminate the program
 
-![Node Lifecyle](resources/02/lifecyle_state.png "Node Lifecyle")
+![Node Lifecyle](../resources/motion/lifecyle_state.png "Node Lifecyle")
 
 ---
 

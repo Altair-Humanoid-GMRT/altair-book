@@ -1,19 +1,53 @@
-# Simulation with Gazebo  
+# Altair Simulation in Gazebo
 
-![Screenshot from 2024-08-01 12-36-43](https://github.com/user-attachments/assets/060fcf49-50ad-46cb-b626-55486e6ed975) `no texture`  
-![Screenshot from 2024-08-05 11-01-20](https://github.com/user-attachments/assets/0a0f50b6-e647-4638-85e0-517dd3e19e8f) `with texture`  
+This guide covers how to set up and run the Altair humanoid robot simulation in Gazebo.
 
-Still a barebone, as there are no walking program
+## Prerequisites
 
-Note:
+Before running the simulation, ensure you have completed the installation process from the [altair_ws repository](https://github.com/Altair-Humanoid-GMRT/altair_ws). Follow the README installation instructions carefully.
 
-Using available assests provided by robotis op3 and OpenRobotics  
-Virtual IMU is working  
-Virtual Camera camera is working  
-Both sensor can be accessed from topic:  
-/gazebo/imu  
-/gazebo/image_raw
+## Running the Simulation
 
-## Run  
+The simulation requires three separate terminal sessions to run different components simultaneously.
 
-ros2 launch altair_simulation altair.gazebo.launch.py
+### Terminal 1: Configuration Setup
+
+First, configure the simulation environment:
+
+```bash
+./configure.py --sim
+```
+
+This command sets up the necessary configuration for simulation mode.
+
+### Terminal 2: MoveIt Motion Planning
+
+In a second terminal, launch the MoveIt motion planning framework:
+
+```bash
+ros2 launch altair_moveit_config move_group.launch.py
+```
+
+This starts the MoveIt move_group node which handles motion planning and execution.
+
+### Terminal 3: Gazebo Simulation
+
+In a third terminal, launch the Gazebo simulation with the Altair robot:
+
+```bash
+ros2 launch quintic_walk altair_gazebo.launch.py
+```
+
+This command starts Gazebo with the Altair robot model and the quintic walk controller.
+
+### Play with Gazebo
+
+![Gazebo Sim](../resources/motion/gazebo_sim.png "Gazebo Sim")
+
+The gazebo window will open with the robot already spawned. We also get another terminal pop up that shows "Gazebo Controller". From this terminal, we can pause, unpause, set initial position, and quit by just pressing the the button provided inside the bracket ([...]).
+
+## Troubleshooting
+
+- Ensure all dependencies are properly installed as per the altair_ws README
+- Verify that your ROS 2 environment is properly sourced
+- Check that all required packages are built successfully
