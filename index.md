@@ -32,6 +32,7 @@ docs/motion/tuning.md
 docs/motion/create_xacro.md
 docs/motion/simulation.md
 docs/motion/dynamixel_controller.md
+docs/ros2-control.md
 ```
 
 ```{toctree}
@@ -55,6 +56,6 @@ docs/elektronis/placeholder.md
 docs/mekanis/placeholder.md
 ```
 
-```
-docs/02-ros2-controller.md
+```{toctree}
+
 ```
