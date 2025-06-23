@@ -27,6 +27,7 @@ docs/get-started/installation.rst
 :caption: Motion
 :maxdepth: 1
 
+docs/motion/
 docs/motion/noetic_Installation_Ubuntu.md
 docs/motion/tuning.md
 docs/motion/create_xacro.md
