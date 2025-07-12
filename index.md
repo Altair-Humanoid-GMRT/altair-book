@@ -32,8 +32,8 @@ docs/motion/noetic_Installation_Ubuntu.md
 docs/motion/tuning.md
 docs/motion/create_xacro.md
 docs/motion/simulation.md
-docs/motion/dynamixel_controller.md
 docs/motion/ros2-control.md
+docs/motion/game_controller.md
 ```
 
 ```{toctree}
