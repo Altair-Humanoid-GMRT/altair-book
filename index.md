@@ -35,6 +35,7 @@ docs/motion/create_xacro.md
 docs/motion/simulation.md
 docs/motion/ros2-control.md
 docs/motion/altair_framework.md
+docs/motion/hardware_interface.md
 ```
 
 ```{toctree}
