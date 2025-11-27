@@ -98,6 +98,21 @@ Fungsi utama yang berjalan secara looping terus menerus hingga motion module dim
     > - Calls process() function of the Sensor Module in the list and saves the result value.
     > - Calls process() function of the Motion Module in the list and saves the result value.
 
+## Get and Send Servo Value
+
+To get and send servo value, we can access it from `process()`.
+
+Get Present position: 
+
+```cpp
+dxls[joint_name]->dxl_state_->present_position_
+```
+
+Send Goal position:
+
+```cpp
+result_[joint_name]->goal_position_ = position;
+```
 
 
 Credit:
