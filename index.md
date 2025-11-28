@@ -36,6 +36,7 @@ docs/motion/simulation.md
 docs/motion/ros2-control.md
 docs/motion/altair_framework.md
 docs/motion/hardware_interface.md
+docs/motion/how-to-build-altair-lab.md
 ```
 
 ```{toctree}
