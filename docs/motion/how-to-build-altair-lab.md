@@ -35,24 +35,23 @@ ros2 launch altair_manager op3_simulation.launch.py
 
 Jika tidak ada error, kamu dapat menggerakkan servo robot di dalam simulasi secara manual. 
 
-Berikut ini ros2 service untuk claim semua servo untuk menggunakan module `experiment_module`.
+- **Berikut ini ros2 service untuk claim semua servo untuk menggunakan module `experiment_module`.**
 
-```bash
- ros2 service call /robotis/set_present_ctrl_modules robotis_controller_msgs/srv/SetModule "{module_name: 'experiment_module'}"
-```
+    ```bash
+    ros2 service call /robotis/set_present_ctrl_modules robotis_controller_msgs/srv/SetModule "{module_name: 'experiment_module'}"
+    ```
 
-Berikut ini ros2 service untuk claim hanya servo `head_pan` & `head_tilt` yang menggunakan `experiment_module`
+- **Berikut ini ros2 service untuk claim hanya servo `head_pan` & `head_tilt` yang menggunakan `experiment_module`**
 
-```bash
-ros2 service call /robotis/set_present_joint_ctrl_modules robotis_controller_msgs/srv/SetJointModule "{joint_name: ['head_pan', 'head_tilt'], module_name: ['experiment_module', 'experiment_module']}"
-```
+    ```bash
+    ros2 service call /robotis/set_present_joint_ctrl_modules robotis_controller_msgs/srv/SetJointModule "{joint_name: ['head_pan', 'head_tilt'], module_name: ['experiment_module', 'experiment_module']}"
+    ```
 
-Proses claim bertujuan agar servo tidak dijalankan oleh lebih dari satu `motion_module` sehingga tidak menimbulkan bentrok. 
+- **Berikut ini `ros2 topic pub` untuk menggerakkan servo head_pan dan head_tilt dengan nilai yang kita mau secara manual:**
 
-Berikut ini `ros2 topic pub` untuk menggerakkan servo head_pan dan head_tilt dengan nilai yang kita mau secara manual:
+    ```bash
+    ros2 topic pub -r 10 /robotis/override_command sensor_msgs/msg/JointState "{name: ['head_pan', 'head_tilt'], position: [0.0, -0.3]}"
+    ```
 
-```bash
-ros2 topic pub -r 10 /robotis/override_command sensor_msgs/msg/JointState "{name: ['head_pan', 'head_tilt'], position: [0.0, -0.3]}"
-```
-
-Jika kita hanya meng-*claim* servo `head_pan` & `head_tilt`, `experiment_module` hanya dapat menggerakkan `head_pan` & `head_tilt`
+> Proses claim bertujuan agar servo tidak dapat dijalankan oleh lebih dari satu `motion_module` sehingga tidak menimbulkan bentrok. 
+Jika kita hanya meng-*claim* servo `head_pan` & `head_tilt` untuk `experiment_module`, kita hanya dapat menggerakkan `head_pan` & `head_tilt` dengan `experiment_module`
