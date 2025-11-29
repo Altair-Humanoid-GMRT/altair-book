@@ -18,7 +18,7 @@ cd altair_lab
 Build altair_lab
 
 ```bash
-colcon build --packages-up-to dynamixel_msgs dynamixel_sdk robotis_device robotis_framework_common robotis_controller op3_base_module op3_action_module experiment_module altair_manager --executor sequential --symlink-install
+colcon build --packages-up-to dynamixel_msgs dynamixel_sdk robotis_device robotis_framework_common robotis_controller op3_description rf_gz_bridge op3_gazebo_ros2 op3_base_module op3_action_module experiment_module altair_manager --executor sequential --symlink-install
 ```
 
 ```bash
