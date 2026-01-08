@@ -2,7 +2,7 @@
 
 It might be useful as testing the quintic walk in isolated manner, without another module. To do so, we can use CLI command to directly command the robot.
 
-# The CLI Commands
+## The CLI Commands
 
 > Note: This can works on real and simulated robot. 
 > Use the altair_lab workspace.
