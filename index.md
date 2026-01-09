@@ -44,7 +44,7 @@ docs/motion/testing-quintic-walk-with-cli-command.md
 :caption: Vision
 :maxdepth: 1
 
-docs/vision/placeholder.md
+docs/vision/vision-motion-bridge.md
 ```
 
 ```{toctree}
